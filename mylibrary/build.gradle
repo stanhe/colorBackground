@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+}
+//添加
+publish {
+    userOrg = 'stanhe'//bintray.com用户名
+    groupId = 'com.stanhe'//jcenter上的路径
+    artifactId = 'auto_change_bgColor'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'this is a view that used as a cover bitmap with color auto changed'//描述，不重要
+    website = 'https://github.com/stanhe/colorBackground'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+}
