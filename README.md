@@ -17,3 +17,5 @@ compile 'com.stanhe:auto_change_bgColor:1.0.0'
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
     </RelativeLayout>
+    
+
