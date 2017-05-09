@@ -1,15 +1,16 @@
-# colorBackground
+## colorBackground
 Can change color background
-## description
+### Description
 it used as a picture covered on the imageview in Android,it looks translucent,you can put an bitmap under it,and it will auto change background color
 
-## how to use
-```
+### Usage
+
+```java
 compile 'com.stanhe:auto_change_bgColor:1.0.0'
 ```
 
 ### layout
-```
+```xml
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
